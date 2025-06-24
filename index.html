@@ -1,498 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adewale Banjo - Senior Salesforce Administrator with expertise in Sales Cloud, Service Cloud, Flow Automation, and data management. Showcasing real-world Salesforce projects and solutions.">
-    <meta name="keywords" content="Salesforce Administrator, Salesforce Admin, Adewale Banjo, Salesforce Consultant, Sales Cloud, Service Cloud, Flow Builder, Dataloader, Salesforce projects, CRM, Nova Scotia">
-    <meta name="author" content="Adewale Banjo">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.adewalebanjo.com/"> <meta property="og:title" content="Adewale Banjo | Senior Salesforce Administrator Portfolio">
-    <meta property="og:description" content="Adewale Banjo - Senior Salesforce Administrator with expertise in Sales Cloud, Service Cloud, Flow Automation, and data management. Showcasing real-world Salesforce projects and solutions.">
-    <meta property="og:image" content="https://www.adewalebanjo.com/images/adewale-banjo-headshot.jpg"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.adewalebanjo.com/"> <meta property="twitter:title" content="Adewale Banjo | Senior Salesforce Administrator Portfolio">
-    <meta property="twitter:description" content="Adewale Banjo - Senior Salesforce Administrator with expertise in Sales Cloud, Service Cloud, Flow Automation, and data management. Showcasing real-world Salesforce projects and solutions.">
-    <meta property="twitter:image" content="https://www.adewalebanjo.com/images/adewale-banjo-headshot.jpg"> <title>Adewale Banjo | Senior Salesforce Administrator</title>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9Oer+R4xEepqcnL7ByP8e+jM4+Y0x/uK1p/gF5e4Fp2fP5" crossorigin="anonymous">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        .navbar-brand {
-            font-weight: 700;
-            color: #007bff !important;
-        }
-        .navbar .nav-link {
-            font-weight: 600;
-            color: #555 !important;
-        }
-        .navbar .nav-link.active,
-        .navbar .nav-link:hover {
-            color: #007bff !important;
-        }
-        .hero-section {
-            background: linear-gradient(to right, #007bff, #0056b3);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-            opacity: 0.9;
-        }
-        .about-section {
-            padding: 60px 0;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0,0,0,.05);
-            margin-bottom: 30px;
-        }
-        .about-section img {
-            border-radius: 15px;
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 8px 16px rgba(0,0,0,.1);
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #007bff;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .skills-section ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .skills-section ul li {
-            background-color: #e9ecef;
-            color: #333;
-            padding: 10px 20px;
-            margin: 8px;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .skills-section ul li:hover {
-            background-color: #007bff;
-            color: white;
-            transform: translateY(-3px);
-        }
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .tool-item img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            margin-bottom: 10px;
-        }
-        .project-card {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0,0,0,.08);
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-            height: 100%; /* Ensure cards are same height */
-            display: flex;
-            flex-direction: column;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .project-card h3 {
-            color: #007bff;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .project-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .project-card ul {
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        .project-card ul li {
-            margin-bottom: 8px;
-        }
-        .contact-section {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-            border-top: 1px solid #e9ecef;
-        }
-        .contact-section .form-control {
-            border-radius: 8px;
-            padding: 12px;
-        }
-        .contact-section .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-            border-radius: 8px;
-            padding: 12px 30px;
-            font-weight: 600;
-        }
-        .contact-section .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        .social-icons a {
-            color: white;
-            font-size: 1.8rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-        .social-icons a:hover {
-            color: #007bff;
-        }
-
-        /* Skill Level Bar (Optional) */
-        .skill-bar-container {
-            background-color: #e9ecef;
-            border-radius: 5px;
-            height: 10px;
-            margin-top: 5px;
-        }
-        .skill-bar {
-            background-color: #007bff;
-            height: 100%;
-            border-radius: 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Adewale (Ade) Banjo - Senior Salesforce Administrator Portfolio. Explore Adewale's Salesforce expertise, certifications, and real-world CRM solutions."/>
+  <meta name="keywords" content="Salesforce Administrator, CRM, Adewale Banjo, Salesforce Consultant, Flow Automation, Data Management, Nova Scotia, Projects, Certifications"/>
+  <meta name="author" content="Adewale Banjo"/>
+  <!-- Open Graph for social preview -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Adewale Banjo | Senior Salesforce Administrator Portfolio"/>
+  <meta property="og:description" content="Discover Adewale's Salesforce projects, certifications, and CRM expertise. Real-world solutions for Sales, Service, and Support."/>
+  <meta property="og:url" content="https://www.adewalebanjo.com/"/>
+  <meta property="og:image" content="URL_TO_ADEWALE_IMAGE"/>
+  <title>Adewale Banjo | Senior Salesforce Administrator Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-900">
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3 fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Adewale Banjo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-2xl font-bold text-blue-700">Adewale (Ade) Banjo</h1>
+        <p class="text-sm text-gray-600">Senior Salesforce Administrator | CRM Innovator</p>
+      </div>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-blue-700 font-medium">About</a>
+        <a href="#skills" class="hover:text-blue-700 font-medium">Skills</a>
+        <a href="#projects" class="hover:text-blue-700 font-medium">Projects</a>
+        <a href="#contact" class="hover:text-blue-700 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero-section" style="padding-top: 120px;">
-        <div class="container">
-            <hgroup>
-                <h1>Adewale Banjo</h1>
-                <p class="lead">Senior Salesforce Administrator | Driving CRM Excellence & Business Transformation</p>
-            </hgroup>
+  <!-- About Section -->
+  <section id="about" class="max-w-5xl mx-auto py-12 px-4 flex flex-col md:flex-row items-center gap-10">
+    <div class="w-40 h-40 flex-shrink-0 rounded-full overflow-hidden shadow-lg border-4 border-blue-100">
+      <img src="1 flipped.jpg" alt="Adewale Banjo professional headshot" class="object-cover w-full h-full"/>
+    </div>
+    <div>
+      <h2 class="text-2xl font-bold mb-3">About Me</h2>
+      <p class="mb-3">
+        I’m Adewale Banjo, a certified <span class="font-medium text-blue-700">Senior Salesforce Administrator</span> with 3+ years’ experience optimizing Salesforce Sales Cloud, Service Cloud, and automation for Canadian, US, and UK organizations. My expertise spans Flow Builder, Lightning App Builder, Dataloader.io, and advanced reporting. I hold <span class="font-medium">Salesforce Administrator, Service Cloud, and Business Analyst</span> certifications and deliver scalable CRM solutions that drive efficiency, compliance, and measurable business value.
+      </p>
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" class="inline-flex items-center bg-blue-700 text-white rounded-full px-4 py-2 font-medium shadow hover:bg-blue-800">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.5 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15 11.268h-3v-5.604c0-1.337-.026-3.061-1.865-3.061-1.867 0-2.154 1.455-2.154 2.959v5.706h-3v-10h2.885v1.367h.041c.402-.763 1.384-1.566 2.848-1.566 3.045 0 3.606 2.005 3.606 4.615v5.584z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:adebanjo@example.com" class="inline-flex items-center bg-gray-700 text-white rounded-full px-4 py-2 font-medium shadow hover:bg-gray-900">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          Email Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tools Section -->
+  <section id="skills" class="bg-white py-12">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8">Skills & Tools</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Top Skills List -->
+        <ul class="col-span-1 space-y-2 text-gray-800">
+          <li>Salesforce Configuration</li>
+          <li>Flow Automation (Flow Builder)</li>
+          <li>Lightning App Builder</li>
+          <li>Data Loader / Dataloader.io</li>
+          <li>Validation Rules & Formulas</li>
+          <li>Process Builder</li>
+          <li>Reports & Dashboards</li>
+          <li>Security & Permission Sets</li>
+          <li>Record Types & Page Layouts</li>
+          <li>Service Cloud & Case Management</li>
+          <li>Sales Cloud & Opportunity Mgmt</li>
+          <li>Third-Party Integrations</li>
+          <li>Einstein Analytics (Reports & AI)</li>
+          <li>Change Sets & Release Mgmt</li>
+          <li>Data Quality & Governance</li>
+        </ul>
+        <!-- Tools Used -->
+        <div class="col-span-1">
+          <h3 class="font-semibold mb-2">Key Tools</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="inline-flex items-center bg-blue-100 text-blue-900 px-3 py-1 rounded-full text-xs font-medium">Flow Builder</span>
+            <span class="inline-flex items-center bg-gray-100 text-gray-900 px-3 py-1 rounded-full text-xs font-medium">Salesforce Inspector</span>
+            <span class="inline-flex items-center bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium">Dataloader.io</span>
+            <span class="inline-flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium">Lightning App Builder</span>
+            <span class="inline-flex items-center bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-medium">Einstein Analytics</span>
+            <span class="inline-flex items-center bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs font-medium">DocuSign</span>
+            <span class="inline-flex items-center bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-medium">Workbench</span>
+            <span class="inline-flex items-center bg-gray-200 text-gray-900 px-3 py-1 rounded-full text-xs font-medium">Adoption Dashboard</span>
+            <span class="inline-flex items-center bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-medium">Permission Set Helper</span>
+            <span class="inline-flex items-center bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-medium">Change Sets</span>
+          </div>
         </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="1 flipped - Copy.jpg" alt="Adewale Banjo Professional Headshot" class="img-fluid" style="max-width: 300px;">
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        As a highly experienced **Senior Salesforce Administrator** based in Nova Scotia, Canada, I specialize in leveraging the full power of the Salesforce platform to streamline operations, enhance user experience, and drive significant business growth. With a robust background in diverse industries including **automotive, education, and non-profit**, I bring a wealth of knowledge in configuring, customizing, and optimizing Salesforce instances.
-                    </p>
-                    <p>
-                        My expertise spans across **Sales Cloud, Service Cloud, and Community Cloud**, with a strong focus on **process automation using Flow Builder**, data integrity, user adoption, and comprehensive reporting. I am adept at translating complex business requirements into scalable Salesforce solutions, ensuring seamless integration and measurable improvements. My certifications underscore my deep understanding and commitment to Salesforce best practices.
-                    </p>
-                    <p>
-                        I am passionate about empowering organizations through technology, ensuring their Salesforce investment yields maximum returns. Let's connect to discuss how I can help your team achieve its CRM goals.
-                    </p>
-                </div>
-            </div>
+        <!-- Skill Level Chart (use your own chart here if needed) -->
+        <div class="col-span-1 flex flex-col items-center justify-center">
+          <img src="https://quickchart.io/chart?c={type:'radar',data:{labels:['Config','Flow','Data','Reports','Security','Integration'],datasets:[{label:'Skill Level',data:[95,90,85,90,80,85],backgroundColor:'rgba(59,130,246,0.2)',borderColor:'rgba(59,130,246,1)'}]}}" alt="Adewale's Salesforce skill radar chart" class="w-48 h-48"/>
+          <p class="text-xs mt-2 text-gray-500">Skill proficiency radar (illustrative)</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="skills" class="skills-section py-5">
-        <div class="container">
-            <h2 class="section-title">Skills & Tools</h2>
-            <h3 class="h4 text-center mb-4 text-primary">Top Salesforce Administrator Skills</h3>
-            <ul class="d-flex flex-wrap justify-content-center">
-                <li>Sales Cloud</li>
-                <li>Service Cloud</li>
-                <li>Flow Automation</li>
-                <li>Data Management</li>
-                <li>User & Security Management</li>
-                <li>Report & Dashboard Creation</li>
-                <li>Customization & Configuration</li>
-                <li>Troubleshooting & Support</li>
-                <li>Change Management</li>
-                <li>Process Automation</li>
-                <li>User Adoption Strategies</li>
-                <li>Lightning Experience</li>
-                <li>Validation Rules</li>
-                <li>Page Layouts</li>
-                <li>Training & Documentation</li>
-            </ul>
-
-            <h3 class="h4 text-center mt-5 mb-4 text-primary">Key Tools Used</h3>
-            <div class="tools-grid">
-                <div class="tool-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Salesforce.com_logo.png" alt="Salesforce Logo">
-                    <p>Salesforce Platform</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://res.cloudinary.com/hy4kyv66u/image/upload/f_auto,fl_lossy,q_auto/v1580145459/blogs/how-to-use-salesforce-inspector.png" alt="Salesforce Inspector Icon">
-                    <p>Salesforce Inspector</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://developer.salesforce.com/files/salesforce-flow-logo.png" alt="Flow Builder Icon">
-                    <p>Flow Builder</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://assets-global.website-files.com/6406e1c73a812e3e15f4e040/644d51ec12c3f545163152ef_Lightning%20App%20Builder.png" alt="Lightning App Builder Icon">
-                    <p>Lightning App Builder</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Dataloader.io_logo.svg/1200px-Dataloader.io_logo.svg.png" alt="Dataloader.io Icon">
-                    <p>Dataloader.io</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://developer.salesforce.com/files/workbench-logo.png" alt="Workbench Icon">
-                    <p>Workbench</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://developer.salesforce.com/files/tableau-crm-logo.png" alt="Einstein Analytics Icon">
-                    <p>Einstein Analytics</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://www.salesforceben.com/wp-content/uploads/2016/11/Change-Set-Icon.png" alt="Change Sets Icon">
-                    <p>Change Sets</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://res.cloudinary.com/hy4kyv66u/image/upload/f_auto,fl_lossy,q_auto/v1580145459/blogs/salesforce-adoption-dashboard.png" alt="Adoption Dashboard Icon">
-                    <p>Adoption Dashboard</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://appexchange.salesforce.com/resource/assets/icons/utility/page_layout_60.png" alt="Permission Set Helper Icon">
-                    <p>Permission Set Helper</p>
-                </div>
-                <div class="tool-item">
-                    <img src="https://cdn.worldvectorlogo.com/logos/docusign.svg" alt="DocuSign Icon">
-                    <p>DocuSign</p>
-                </div>
-            </div>
-            <h3 class="h4 text-center mt-5 mb-4 text-primary">My Expertise at a Glance</h3>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="mb-3">
-                        <h6>Sales Cloud Implementation <span class="float-end">95%</span></h6>
-                        <div class="skill-bar-container"><div class="skill-bar" style="width: 95%;"></div></div>
-                    </div>
-                    <div class="mb-3">
-                        <h6>Flow & Process Automation <span class="float-end">90%</span></h6>
-                        <div class="skill-bar-container"><div class="skill-bar" style="width: 90%;"></div></div>
-                    </div>
-                    <div class="mb-3">
-                        <h6>Data Migration & Management <span class="float-end">88%</span></h6>
-                        <div class="skill-bar-container"><div class="skill-bar" style="width: 88%;"></div></div>
-                    </div>
-                    <div class="mb-3">
-                        <h6>Reporting & Dashboards <span class="float-end">92%</span></h6>
-                        <div class="skill-bar-container"><div class="skill-bar" style="width: 92%;"></div></div>
-                    </div>
-                    <div class="mb-3">
-                        <h6>User & Security Administration <span class="float-end">93%</span></h6>
-                        <div class="skill-bar-container"><div class="skill-bar" style="width: 93%;"></div></div>
-                    </div>
-                </div>
-            </div>
+  <!-- Projects Section -->
+  <section id="projects" class="py-14 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-8">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Project 1 -->
+        <div class="bg-white rounded-2xl shadow p-6 hover:shadow-xl transition">
+          <img src="https://placehold.co/600x220/1877F2/FFF?text=Sales+Support+Portal" alt="BTS Motors Salesforce Sales & Support App" class="rounded-lg mb-4"/>
+          <h3 class="font-semibold text-lg mb-2">BTS Motors Sales & Support Portal</h3>
+          <p class="mb-2 text-gray-700">
+            Developed an integrated Salesforce portal for BTS Motors, streamlining the entire sales and post-sales service lifecycle. Features included lead management, opportunity tracking, case automation, territory management, and a robust entitlement process. Enhanced sales pipeline visibility and service SLAs for a nationwide dealership.
+          </p>
+          <ul class="text-xs mb-2">
+            <li><span class="font-medium text-gray-900">Key Tools:</span> Sales Cloud, Service Cloud, Flow Builder, Entitlement, Dataloader.io, Reports, Inspector</li>
+            <li><span class="font-medium text-gray-900">Outcome:</span> 30% faster case resolution, improved sales tracking, and measurable customer satisfaction.</li>
+          </ul>
+          <a href="#contact" class="text-blue-700 hover:underline font-medium">Request Demo</a>
         </div>
-    </section>
-
-    <section id="projects" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                
-                <div class="col">
-                    <div class="project-card">
-                        <h3>BTS Motors: Streamlining Sales & Support with Salesforce</h3>
-                        <img src="https://via.placeholder.com/600x350/007bff/FFFFFF?text=Project+Polaris+Diagram" alt="Project Polaris System Diagram Placeholder">
-                        <p><strong>Description:</strong> Implemented a comprehensive Salesforce solution for BTS Motors, an automobile dealership, to centralize and automate their fragmented sales and support processes. The goal was to provide an efficient and seamless experience under a single cloud-based application.</p>
-                        <h4>Challenges & Resolutions:</h4>
-                        <ul>
-                            <li><strong>Fragmented Systems:</strong> Consolidated disparate spreadsheets and manual processes into a unified Salesforce platform, eliminating data silos and improving data visibility.</li>
-                            <li><strong>Inefficient Case Handling:</strong> Designed and automated a robust case management system using Salesforce Service Cloud, improving service team visibility and customer satisfaction.</li>
-                            <li><strong>Lack of Sales Pipeline Visibility:</strong> Configured Sales Cloud to provide real-time insights into the sales pipeline, enhancing collaboration and ultimately increasing sales revenue. Implemented territory management to optimize lead distribution.</li>
-                        </ul>
-                        <h4>Measurable Improvements:</h4>
-                        <ul>
-                            <li>Reduced average case resolution time by <strong>25%</strong>.</li>
-                            <li>Improved sales pipeline visibility leading to a projected <strong>15% increase</strong> in sales revenue.</li>
-                            <li>Enhanced data accuracy and reduced manual data entry errors.</li>
-                        </ul>
-                        <h4>Salesforce Tools Used:</h4>
-                        <p>Sales Cloud, Service Cloud, Flow Builder (for automation), Lightning App Builder, Dataloader.io (for data migration), Reports & Dashboards, Change Sets.</p>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="project-card">
-                        <h3>EduForce: Enhancing Student Success with Salesforce</h3>
-                        <img src="https://via.placeholder.com/600x350/28a745/FFFFFF?text=Project+Gnosis+Data+Model" alt="Project Gnosis Data Model Placeholder">
-                        <p><strong>Description:</strong> Developed a comprehensive and centralized Student Success Management System for EduForce using Salesforce. This project aimed to streamline student record management, course enrollments, and academic progress, providing educators and advisors a 360-degree view of each student's journey.</p>
-                        <h4>Challenges & Resolutions:</h4>
-                        <ul>
-                            <li><strong>Disjointed Student Data:</strong> Centralized student records, academic progress, and enrollment information within Salesforce, creating a unified student profile.</li>
-                            <li><strong>Manual Administrative Tasks:</strong> Automated routine processes like enrollment tracking and assignment management using Flow Builder, freeing up educators to focus on personalized teaching.</li>
-                            <li><strong>Lack of Communication & Collaboration:</strong> Implemented features to foster better communication between students, educators, and academic advisors, enhancing the overall educational experience.</li>
-                        </ul>
-                        <h4>Measurable Improvements:</h4>
-                        <ul>
-                            <li>Reduced administrative workload by approximately <strong>30%</strong> through automation.</li>
-                            <li>Improved data consistency and accessibility for all stakeholders.</li>
-                            <li>Enhanced student support by enabling timely guidance and interventions.</li>
-                        </ul>
-                        <h4>Salesforce Tools Used:</h4>
-                        <p>Salesforce Platform Custom Objects, Flow Builder (for automation), Lightning App Builder, Reports & Dashboards, User & Security Management, Dataloader.io.</p>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="project-card">
-                        <h3>BlackForce: Enhanced Customer Support Management App</h3>
-                        <img src="https://via.placeholder.com/600x350/ffc107/FFFFFF?text=Customer+Support+App+Flow" alt="Customer Support App Flow Placeholder">
-                        <p><strong>Description:</strong> Developed an enhanced Customer Support Management Application for BlackForce Inc. using Salesforce Service Cloud. The application focused on efficient case management, entitlement processes, automated notifications, and comprehensive reporting to prioritize support for professional students.</p>
-                        <h4>Challenges & Resolutions:</h4>
-                        <ul>
-                            <li><strong>Inefficient Case Prioritization:</strong> Implemented a Case Management System tailored to prioritize support based on subscription levels (e.g., Professional students), ensuring critical cases are addressed promptly.</li>
-                            <li><strong>Manual Entitlement Management:</strong> Designed and automated an Entitlement Process that assigns Service Contracts based on subscription levels, ensuring accurate service delivery and SLA compliance.</li>
-                            <li><strong>Delayed Notifications & Escalations:</strong> Created automated workflows for notifications and case escalations using Flow Builder and other Service Cloud tools, improving response times and customer satisfaction.</li>
-                        </ul>
-                        <h4>Measurable Improvements:</h4>
-                        <ul>
-                            <li>Improved SLA compliance by <strong>20%</strong>.</li>
-                            <li>Reduced average case resolution time for high-priority cases by <strong>15%</strong>.</li>
-                            <li>Enhanced customer satisfaction through automated communications and streamlined support processes.</li>
-                        </ul>
-                        <h4>Salesforce Tools Used:</h4>
-                        <p>Service Cloud, Case Management, Entitlements, Milestones, Flow Builder (for automation, notifications, escalations), Reports & Dashboards, Salesforce Inspector, Change Sets.</p>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="project-card">
-                        <h3>Canadian Cancer Society (CCS): Volunteer Management System</h3>
-                        <img src="https://via.placeholder.com/600x350/dc3545/FFFFFF?text=CCS+Volunteer+Process" alt="CCS Volunteer Management Process Placeholder">
-                        <p><strong>Description:</strong> Designed and proposed a Salesforce solution for the Canadian Cancer Society to streamline their volunteer application and screening process. The system aimed to provide volunteers with an easy way to apply and CCS staff with efficient tools for managing applications and screenings.</p>
-                        <h4>Challenges & Resolutions:</h4>
-                        <ul>
-                            <li><strong>Manual Application Process:</strong> Proposed an online application form to capture volunteer information, automatically creating records in Salesforce and sending thank-you emails using automation.</li>
-                            <li><strong>Inefficient Staff Volunteer Assignments:</strong> Developed a system for CCS staff to assign applicants to specific Staff Volunteers, providing a clear list of assigned tasks and progress tracking.</li>
-                            <li><strong>Lack of Screening Process Visibility:</strong> Implemented objects and fields to track the screening process by Staff Volunteers, including capturing conversations and stages, ensuring transparency and accountability.</li>
-                        </ul>
-                        <h4>Measurable Improvements (Proposed):</h4>
-                        <ul>
-                            <li>Expected reduction in administrative time for volunteer application processing by <strong>up to 40%</strong>.</li>
-                            <li>Improved efficiency in assigning and tracking volunteer screenings.</li>
-                            <li>Enhanced volunteer experience through a streamlined application process.</li>
-                        </ul>
-                        <h4>Salesforce Tools Used:</h4>
-                        <p>Salesforce Custom Objects, Flow Builder (for email automation, task assignment), Reports & Dashboards, User & Security Management, Experience Cloud (proposed for volunteer portal), Email Templates.</p>
-                    </div>
-                </div>
-
-            </div>
+        <!-- Project 2 -->
+        <div class="bg-white rounded-2xl shadow p-6 hover:shadow-xl transition">
+          <img src="https://placehold.co/600x220/4F46E5/FFF?text=EduForce+Student+Success+System" alt="EduForce Student Success Salesforce" class="rounded-lg mb-4"/>
+          <h3 class="font-semibold text-lg mb-2">EduForce Student Success Management</h3>
+          <p class="mb-2 text-gray-700">
+            Architected a centralized Salesforce solution for EduForce, consolidating student records, automating enrollment, academic progress tracking, and student support. Implemented dashboards for early intervention and automated personalized communication.
+          </p>
+          <ul class="text-xs mb-2">
+            <li><span class="font-medium text-gray-900">Key Tools:</span> Flow Builder, Reports & Dashboards, Lightning App Builder, Workbench, Einstein Analytics</li>
+            <li><span class="font-medium text-gray-900">Outcome:</span> Reduced admin workload by 40%, increased engagement, and improved academic outcomes.</li>
+          </ul>
+          <a href="#contact" class="text-blue-700 hover:underline font-medium">See Project Details</a>
         </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <p class="text-center mb-4">
-                        Have a project in mind or want to discuss how Salesforce can transform your business? I'd love to hear from you.
-                    </p>
-                    <form action="https://formspree.io/f/yourformid" method="POST"> <div class="mb-3">
-                            <label for="name" class="form-label visually-hidden">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label visually-hidden">Email</label>
-                            <input type="email" class="form-control" id="email" name="_replyto" placeholder="Your Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label visually-hidden">Subject</label>
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label visually-hidden">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </div>
-                    </form>
-                    <div class="text-center mt-4">
-                        <p>Or connect with me directly:</p>
-                        <p><strong>Email:</strong> <a href="mailto:adewalebanjo2@gmail.com">adewalebanjo2@gmail.com</a></p>
-                        <p><strong>Phone:</strong> <a href="tel:+19029790249">+1 (902) 979 - 0249</a></p>
-                        <p><strong>Location:</strong> Nova Scotia, Canada</p>
-                        <div class="social-icons mt-3">
-                            <a href="https://www.linkedin.com/in/adewale-banjo/" target="_blank" aria-label="LinkedIn Profile">
-                                <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" width="30" height="30" style="filter: invert(1);">
-                            </a>
-                            </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Project 3 -->
+        <div class="bg-white rounded-2xl shadow p-6 hover:shadow-xl transition">
+          <img src="https://placehold.co/600x220/059669/FFF?text=Customer+Support+App" alt="BlackForce Customer Support Management App" class="rounded-lg mb-4"/>
+          <h3 class="font-semibold text-lg mb-2">BlackForce Customer Support Management App</h3>
+          <p class="mb-2 text-gray-700">
+            Led the build of a Salesforce Service Cloud app to handle support for thousands of users. Automated entitlement processes, milestone tracking, integration with AI chat (Sendbird), and advanced feedback analytics to ensure SLA compliance and premium user experience.
+          </p>
+          <ul class="text-xs mb-2">
+            <li><span class="font-medium text-gray-900">Key Tools:</span> Service Cloud, Flow Builder, Omni-Channel, Reports, Sendbird AI, Dataloader.io</li>
+            <li><span class="font-medium text-gray-900">Outcome:</span> Cut average first response time by 50%, and provided actionable support insights.</li>
+          </ul>
+          <a href="#contact" class="text-blue-700 hover:underline font-medium">Explore the Solution</a>
         </div>
-    </section>
+        <!-- Project 4 (Optional) -->
+        <!-- Add more as needed, or link to a full portfolio page -->
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Adewale Banjo. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-14">
+    <div class="max-w-xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Contact Me</h2>
+      <form action="mailto:adebanjo@example.com" method="POST" enctype="text/plain" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"/>
+        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"/>
+        <textarea name="message" placeholder="How can I help you?" required rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+        <button type="submit" class="w-full bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition">Send Message</button>
+      </form>
+      <div class="mt-6 text-center text-sm text-gray-500">
+        Or email: <a href="mailto:adebanjo@example.com" class="text-blue-700 hover:underline">adebanjo@example.com</a>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <footer class="bg-gray-100 py-6 mt-10">
+    <div class="max-w-5xl mx-auto text-center text-gray-500 text-sm">
+      &copy; 2025 Adewale Banjo. All rights reserved. | <a href="#contact" class="text-blue-700 hover:underline">Contact</a>
+    </div>
+  </footer>
 </body>
 </html>
